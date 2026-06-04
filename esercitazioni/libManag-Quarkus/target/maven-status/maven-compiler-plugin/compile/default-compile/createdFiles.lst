@@ -1,0 +1,14 @@
+it\exprivia\exception\GlobalHandler.class
+it\exprivia\GreetingResource.class
+it\exprivia\models\dtos\BookDTO.class
+it\exprivia\exception\BookNotFoundException.class
+it\exprivia\mapper\BookMapperImpl.class
+it\exprivia\services\impl\IBook.class
+it\exprivia\exception\ServiceException.class
+it\exprivia\controller\BookController.class
+it\exprivia\health\DatabaseHealth.class
+it\exprivia\services\impl\BookServiceImpl.class
+it\exprivia\exception\DuplicatedBookException.class
+it\exprivia\mapper\BookMapper.class
+it\exprivia\models\entity\Book.class
+it\exprivia\repository\BookRepository.class
