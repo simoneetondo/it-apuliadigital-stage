@@ -1,0 +1,241 @@
+AGGIUNGERE QUERY DB
+AGGIUNGERE RESPONSE ENTITY E CONTROLLI SUL NULL -- OK
+
+04-12
+
+-INSERITO LOMBOK NEI PLUGIN E NEL POM ( STUDIARE PER CAPIRE TUTTE LE SUE FUNZIOANLITA' ) - INSERITO NEI DTO PER TESTARLO
+
+-STUDIARE DTO MANUALE -- OK
+-STUDIARE CLASSE MAPPER DTO -- OK
+
+-COLLEGARE MYSQL SU PROGETTOSCUOLA -- OK
+
+-EFFETTUARE I CONTROLLI SU ALUNNI (NUMERO DI TELEFONO)
+
+05-12
+
+- MIGLIORAMENTO SULLE RESPONSE ENTITY CON
+
+- STUDIARE TEST
+
+- CREARE AMBIENTE SU DOCKER PER SPRING
+
+10/ 12
+
+-STUDIARE CLASS EXCEPTION ( DA INSERIRE STUNUM ) PERSONALIZZATE
+-INSERIRE ANCHE LA InvalidCredentialException
+
+-INSERIRE LOG IN (FINIRE IL CONTROLLER)
+
+15/12
+
+-AGGIUNTA DI COSTRUTTORI PER CREARE I TEST A STUDENT E NEL DTO
+-IMPLEMENTAZIONE MOCKITO PER I TEST
+
+// PROFILI MVN
+
+resources>
+<!-- indica a maven dove cercare le risorse -->
+<directory>sorc/main/resources</directory>
+<!-- questo va a dire a mvn di sostituire i valori nel db-properties con i valori del profilo attivo -->
+<filtering>true </filtering>
+
+		</resources>
+	</build>
+
+	<profiles>
+		<profile>
+			<id> dev </id>
+			<activation>
+			<!-- questo indica a mvn che se non è stato un utente specifico deve utilizzare il profilo .dev -->
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>env</name>
+					<value>dev</value>
+				</property>
+			</activation>
+			<properties>
+				<db.driverClassName>com.mysql.cj.jdbc.Driver</db.driverClassName>
+				<db.url>jdbc:mysql://localhost:3306/project_school</db.url>
+				<db.username>root</db.username>
+				<db.password>Lecce2024!</db.password>
+			</properties>
+		</profile>
+
+/profiles>
+
+id = null o controlli su id - strategy o verify springboot
+password utilizzare becrypt
+coverage da implementare
+test si utilizza should_*nomeMetodoIniziale*_return*- - -* (business exception, empty, etc)
+
+07/01
+
+- COMPLETARE TEACHER -- OK
+- PULIRE CONTROLLER TEACHER -- OK
+- COMPLETARE CON EXCEPTION -- OK
+
+- CREARE SERVICE E CONTROLLER PER LA LOGIN
+- CRYPTARE LA PASSWORD -- OK SOLO PER STUDENT (MODIFICARE ANCHE I TEST AGGIUNGENDO IL MOCK DELL'ENCODER)
+- AGGIUNGERE CAMPI ?? NOT NULL ETC -- OK
+
+08/01
+
+- CONTROLLER ADVICE ( STANDARD PROFESSIONALE )
+- RFC 7807 ( PROBLEM DETAIL ) DALLA VERSIONE DI SPRINGBOOT 3
+- AGGIUNTA DEL LOGIN CONTROLLER E SERVICE -- OK
+
+09/01
+
+- TERMINARE CONTROLLER E LOGIN CAPIRE SE VA -OK
+- FINIRE TEACHER- OK
+
+12/01
+
+- CONTROLLARE TEST ERRORE ROSSO (?) - OK
+- TEST SUL SAVE NUOVO - OK 2 EXCEPTION
+- AGGIUNGERE TOKEN JWT - OK
+- INVIO EMAIL CON TOKEN PER RESET? - no
+- IMPLEMENTAZIONE JACOCO PER COVERGAGE - OK
+
+13/01
+. TESTARE CONTROLLER
+OGGETTO PERSON IN USER E SETTARE MEGLIO RUOLI E PERMESSI
+
+- CREARE UN SUPERADMIN PER IL FRONTEND DA POTER PROVARE L'API SENZA PERMESSI - ok
+
+14/01
+
+- (TONDI)
+- STUDIARE OPENAPI
+
+- { OPEN API
+  -STANDARD CHE DESCRIVE LE API IN FORMATO YAML/JSON
+  -TRASFORMA IL CONTRATTO IN UNA PAGINA WEB INTERATTIVA
+  -IN SPRING BOOT SI UTILIZZA *CODE-FIRST*, E LO YAML VIENE GENERATO AUTOMATICAMENTE ALL'INDIRIZZO /V3/API- DOCS
+  }
+  { ANNOTAZIONI
+- @TAG per raggruppare gli endpoint
+- @OPERATION per descrivere un singolo endpoint
+- @PARAMETER per descrivere i parametri di un endpoint
+- @APIRESPONSE per descrivere le risposte possibili di un endpoint
+- @SCHEMA per descrivere gli schemi dei modelli
+- @SECURITYREQUIREMENT per descrivere i requisiti di sicurezza (CON JWT O ALTRO)
+  }
+
+
+- IMPLEMENTARE DIVERSI DB CON DOCKER - OK
+- ELIMINARE LE CLASSI TEST CON JACOCO
+- INTEGRATION TEST 20/01
+
+
+- CRITERIA CLASSE
+
+
+- [INTEGRATION TEST CON MOCKMVC]
+- DIVIDERE GLI UNIT TEST DAGLI INTEGRATION
+- DASTASBASE REALE (H2): NON FINGIAMO I DATI, MA LI INSERIAMO USANDO JPA E POI VERIFICHIAMO IL RISULTATO
+- NON CI SONO MOPCK, MA SI USA MOCKMVC PER SIMULARE LE RICHIESTE HTTP VERSO IL CONTROLLER ( SERVICE, MAPPER, REPOSITORY
+  SONO QUELLI REALI)
+- MOCKMVC MOCKA IL SERVER (TOMCAT) INVECE DI APRIRE UNA VERA PORTA E INVIARE PACCHETTI TCP, SIMULA IL PROTOCOLLO HTTP
+  DENTRO LA MEMORIA DEL COMPUTER
+
+- VELOCITA' PERCHè NON AVVIA IL SERVER HTTP
+
+
+- [REFLECTION]
+- LA REFLECTION E' LA CAPACITà DEL PROGRAMMA DI ESAMINARE SE STESSO, A RUNTIME.
+- NORMALMENTE PER ISTANZIARE UN OGGETTO FARESTI: PERSONA P = NEW PERSONA(), CON LA REFLECTION POTRESTI FARE TUTTO
+  AL VOLO:
+
+1. OTTENERE IL NOME DI UNA CLASSE
+2. VEDERE QUALI CAMPI ( VARIABILI ) E METODI HA
+3. MODIFICARE CAMPI PRIVATI ( SI PUò ROMPERE L'INCAPSULAMENTO )
+4. ISTANZIARE OGGETTI SENZA NEW
+   [SPRING NE HA UN BISOGNO ENORME PERCHE']
+
+- SENZA LA REFLECTION DOVREMMO CONFIGURARE OGNI PEZZO MANUALMENTE, SPRING LA USA PER TRE MOTIVI:
+
+1. DEPENDENCY INJECTION ( L'USO DI @AUTOWIRED )
+
+- QUANDO METTI AUTOWIRED SU UN CAMPO PRIVATO, SPRING NON USA UN SETTER PUBBLICO MA USA LA REFLECTION PER:
+- CERCARE NEL PROGETTO TUTTE LE CLASSI ANNOTATE CON COMPONENT
+- TROVARE IL CAMPO CON AUTOWIRED
+- FORZARE L'ACCESSO A QUEL CAMPO (ANCHE SE PRIVATE) E INIETTARCI DENTRO L'ISTANZA CORRETTA.
+
+2. GESTIONE DELLE ANNOTAZIONI
+
+- SPRING PASSA LA VITA A LEGGERE ANNOTAZIONI COME @RESTCONTROLLER, @SERVICE
+  COME FA A SAPERE CHE DEVE RISPONDERE A DELLE CHIAMATE HTTP? SCANSIONA LE CLASSI CON LA REFLECTION, LEGGE I METADATI
+  DELLE ANNOTAZIONI E MAPPA L'URL AL TUO METODO
+
+3. PROXY E AOP (ASPETTI)
+
+- @TRANSACTION, QUANDO LA USI SPRING CREA UN PROXY ( UNA CLASSE FINTA ) CHE AVVOLGE LA TUA.
+  USANDO LA REFLECTION, SPRING INTERCETTA LE CHIAMATE AL TUO METODO, APRE LA TRANSAZIONE NEL DB, ESEGUE IL CODICE E POI
+  CHIUDE LA TRANSAZIONE.
+
+
+- [ASPETTI]
+- L'ASPECT SI UTILIZZA PER TUTTO CIO' CHE NON è STRETTAMENTE LEGATO AL WEB
+- IL CONTROLLER ADVICE SI OCCUPA SOLAMENTE DI RISPONDERE ALLE CHIAMATE HTTP , L'ASPECT SI OCCUPA DI COME FUNZIONA
+  INTERAMENTE IL SISTEMA
+- [UTILIZZO]
+- PERFORMANCE : IN AZIENDA è FONDAMENTALE SAPERE SE UN DATABASE è LENTO O SE UN SERVIZIO STA RITARDANDO
+- [AUDIT E TRACCIABILITA'] NELLE APPLICAZIONI FINANZIARIE, OGNI VOLTA CHE UN DATO VIENE MODIFICATO BISOGNA
+  SCRIVERE SU UNA TABELLA DI LOG CHI è STATO
+- [CACHING EFFICIENZA] PRIMA CHE IL METODO PARTA, CONTROLLA: HO GIA' IL RISULTATO?
+  SE SI, LO RESTITUISCE SENZA FAR GIRARE CODICE A VUOTO
+- [GESTIONE DEL RETRY, RESILIENZA] A VOLTE UNA CHIAMATA AD UN SERVIZIO ESTERNO FALLISCE PER UN MICRO-INTERRUZIONE DI
+  RETE
+  INVECE DI FAR FALLIRE L'OPERAZIONE, INTERCETTA L'ERRORE E RIPROVA AUTOMATICAMENTE 3 VOLTE PRIMA DI ARRENDERSI
+
+1. L'analogia del Segretario
+   Diciamo che tu voglia parlare con il "Direttore" (la tua classe originale, es. ReportService).
+
+Senza Proxy: Entri dritto nell'ufficio del Direttore e gli parli. Nessuno sa che sei entrato, nessuno controlla quanto
+tempo resti.
+
+Con Proxy: Devi passare dal Segretario.
+
+Il Segretario prende nota della tua ora di arrivo (Before Advice).
+
+Ti lascia entrare nell'ufficio del Direttore (Method Execution).
+
+Quando esci, il Segretario guarda l'orologio e segna l'ora di uscita (After Advice).
+
+Il "Direttore" non sa nemmeno che il segretario sta prendendo appunti; lui si limita a fare il suo lavoro.
+
+2. Cosa succede nel codice
+   Quando Spring vede che una tua classe (es. MioServizio) ha un'annotazione come @Transactional o @LogExecutionTime,
+   non crea semplicemente un oggetto di quella classe.[Crea un Proxy, ovvero una classe generata "al volo" che eredita
+   dalla tua o ne implementa l'interfaccia.]
+
+Ecco come appare il flusso di una chiamata:
+
+Il Chiamante invoca mioServizio.metodo().
+
+In realtà sta chiamando il Proxy.
+
+Il Proxy esegue la logica dell'aspetto (es. fa partire il cronometro).
+
+Il Proxy chiama il metodo reale sulla classe Target (la tua classe vera).
+
+Il Proxy riprende il controllo, finisce la logica (es. ferma il cronometro) e restituisce il risultato.
+
+
+
+28/01
+
+- circuit bracker
+- logfall tollerance
+- kafka
+- Mongo
+- QUERY PARAM ? QUERY COMPLESSE, QUERY SPRING? - JPQL MEDIO-BASSO / CRITERIA MEDIO-ALTO
+- QUARKUS
+- Kafka
+- Kubernates
+
+
+
+

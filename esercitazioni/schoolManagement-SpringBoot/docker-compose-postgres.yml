@@ -1,0 +1,19 @@
+services:
+  db-postgres:
+    image: postgres:15
+    container_name: postgres-scuola
+    restart: always
+    environment:
+      POSTGRES_DB: project_school
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: Lecce2024!
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - net-scuola
+
+networks:
+  net-scuola:
+    external: true

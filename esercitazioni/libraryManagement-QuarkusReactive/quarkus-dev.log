@@ -1,0 +1,719 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for it.exprivia:mutiny:quarkus:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-compiler-plugin @ line 119, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------------< it.exprivia:mutiny >-------------------------
+[INFO] Building mutiny 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] ------------------------------[ quarkus ]-------------------------------
+[INFO] 
+[INFO] --- quarkus:3.31.3:dev (default-cli) @ mutiny ---
+[INFO] Invoking quarkus:3.31.3:generate-code (default-generate-code) @ mutiny
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ mutiny
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Invoking compiler:3.11.0:compile (default-compile) @ mutiny
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 38 source files with javac [debug release 21] to target\classes
+[INFO] Invoking quarkus:3.31.3:generate-code-tests (default-generate-code-tests) @ mutiny
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ mutiny
+[INFO] skip non existing resourceDirectory C:\Users\trsim\Documents\Progetti\mutiny\src\test\resources
+[INFO] Invoking compiler:3.11.0:testCompile (default-testCompile) @ mutiny
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 21] to target\test-classes
+Listening for transport dt_socket at address: 5005
+Press [e] to edit command line args (currently ''), [h] for more options>
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [h] for more options>
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2026-05-26 13:10:30,912 INFO  [org.testcontainers.DockerClientFactory] (build-40) Testcontainers version: 2.0.3
+2026-05-26 13:10:31,070 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-40) Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2026-05-26 13:10:31,676 INFO  [org.testcontainers.dockerclient.DockerClientProviderStrategy] (build-40) Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2026-05-26 13:10:31,679 INFO  [org.testcontainers.DockerClientFactory] (build-40) Docker host IP address is localhost
+2026-05-26 13:10:31,695 INFO  [org.testcontainers.DockerClientFactory] (build-40) Connected to docker: 
+  Server Version: 29.4.3
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 15879 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-05-26 13:10:31,701 INFO  [org.testcontainers.images.PullPolicy] (build-40) Image pull policy will be performed by: DefaultPullPolicy()
+2026-05-26 13:10:31,702 INFO  [org.testcontainers.utility.ImageNameSubstitutor] (build-40) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-05-26 13:10:31,708 INFO  [org.testcontainers.DockerClientFactory] (build-40) Checking the system...
+2026-05-26 13:10:31,708 INFO  [org.testcontainers.DockerClientFactory] (build-40) ?? Docker server version should be at least 1.6.0
+2026-05-26 13:10:31,818 INFO  [tc.docker.io/library/postgres:17] (build-40) Creating container for image: docker.io/library/postgres:17
+2026-05-26 13:10:31,870 INFO  [org.testcontainers.utility.RegistryAuthLocator] (build-40) Credential helper/store (docker-credential-desktop) does not have credentials for docker.io
+2026-05-26 13:10:31,875 WARN  [tc.docker.io/library/postgres:17] (build-40) Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at C:\Users\trsim\.testcontainers.properties
+2026-05-26 13:10:31,876 INFO  [tc.testcontainers/ryuk:0.13.0] (build-40) Creating container for image: testcontainers/ryuk:0.13.0
+2026-05-26 13:10:31,914 INFO  [org.testcontainers.utility.RegistryAuthLocator] (build-40) Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-05-26 13:10:31,988 INFO  [tc.testcontainers/ryuk:0.13.0] (build-40) Container testcontainers/ryuk:0.13.0 is starting: 7076dd6f2999a368c6460b629fc9ec4f141aad9096f145f4cf842d8cc5bda1fb
+2026-05-26 13:10:32,228 INFO  [tc.testcontainers/ryuk:0.13.0] (build-40) Container testcontainers/ryuk:0.13.0 started in PT0.3520257S
+2026-05-26 13:10:32,279 INFO  [tc.docker.io/library/postgres:17] (build-40) Container docker.io/library/postgres:17 is starting: 2441a9ab7db8772cd77861a1b2a42aa9f22c1a8f388d661798d901d2e26e02f2
+2026-05-26 13:10:33,338 INFO  [tc.docker.io/library/postgres:17] (build-40) Container docker.io/library/postgres:17 started in PT1.520397S
+2026-05-26 13:10:33,339 INFO  [tc.docker.io/library/postgres:17] (build-40) Container is started (JDBC URL: jdbc:postgresql://localhost:58671/quarkus?loggerLevel=OFF)
+2026-05-26 13:10:33,339 INFO  [io.quarkus.devservices.postgresql.deployment.PostgresqlDevServicesProcessor] (build-40) Dev Services for PostgreSQL started.
+2026-05-26 13:10:33,341 INFO  [io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor] (build-40) Dev Services for default datasource (postgresql) started - container ID is 2441a9ab7db8
+2026-05-26 13:10:33,344 INFO  [io.quarkus.hibernate.orm.deployment.dev.HibernateOrmDevServicesProcessor] (build-2) Setting quarkus.hibernate-orm.schema-management.strategy=drop-and-create to initialize Dev Services managed database
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-05-26 13:10:35,184 WARN  [io.quarkus.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.hibernate-orm.generation" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+[Hibernate] 
+    set client_min_messages = WARNING
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FKokwvlrv6o4i4h3le3bwhe6kie
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FK6xxlcjc0rqtn5nq28vjnx5t9d
+[Hibernate] 
+    drop table if exists books cascade
+[Hibernate] 
+    drop table if exists loans cascade
+[Hibernate] 
+    drop table if exists users cascade
+[Hibernate] 
+    drop sequence if exists loans_SEQ
+[Hibernate] 
+    set client_min_messages = WARNING
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FKokwvlrv6o4i4h3le3bwhe6kie
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FK6xxlcjc0rqtn5nq28vjnx5t9d
+[Hibernate] 
+    drop table if exists books cascade
+[Hibernate] 
+    drop table if exists loans cascade
+[Hibernate] 
+    drop table if exists users cascade
+[Hibernate] 
+    drop sequence if exists loans_SEQ
+[Hibernate] 
+    create sequence loans_SEQ start with 1 increment by 50
+[Hibernate] 
+    create table books (
+        publication_year integer not null,
+        stock integer not null,
+        isbn varchar(20) not null,
+        author varchar(255) not null,
+        status varchar(255) not null check ((status in ('AVAILABLE','RESERVED','DAMAGED','OUT_OF_STOCK'))),
+        title varchar(255) not null,
+        genre varchar(255) array not null,
+        primary key (isbn)
+    )
+[Hibernate] 
+    create table loans (
+        loan_date date not null,
+        return_date date not null,
+        id bigint not null,
+        book_id varchar(20) not null,
+        status varchar(255) not null check ((status in ('ACTIVE','RETURNED','OVERDUE','PENDING'))),
+        user_id varchar(255) not null,
+        primary key (id)
+    )
+[Hibernate] 
+    create table users (
+        date_of_birthday timestamp(6) not null,
+        codice_fiscale varchar(255) not null,
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        phone_number varchar(255) not null unique,
+        primary key (codice_fiscale)
+    )
+[Hibernate] 
+    alter table if exists loans 
+       add constraint FKokwvlrv6o4i4h3le3bwhe6kie 
+       foreign key (book_id) 
+       references books
+[Hibernate] 
+    alter table if exists loans 
+       add constraint FK6xxlcjc0rqtn5nq28vjnx5t9d 
+       foreign key (user_id) 
+       references users
+2026-05-26 13:10:36,704 INFO  [io.quarkus] (Quarkus Main Thread) mutiny 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.31.3) started in 6.729s. Listening on: http://localhost:8080
+2026-05-26 13:10:36,708 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2026-05-26 13:10:36,709 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, compose, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, reactive-pg-client, rest, rest-jackson, smallrye-context-propagation, smallrye-fault-tolerance, smallrye-health, smallrye-openapi, swagger-ui, vertx]
+[Hibernate] 
+    select
+        b1_0.isbn,
+        b1_0.author,
+        b1_0.genre,
+        b1_0.publication_year,
+        b1_0.status,
+        b1_0.stock,
+        b1_0.title 
+    from
+        books b1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.loan_date,
+        l1_0.return_date,
+        l1_0.status,
+        l1_0.user_id 
+    from
+        loans l1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        count(*) 
+    from
+        loans l1_0
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        count(*) 
+    from
+        users u1_0
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    where
+        u1_0.codice_fiscale=$1
+[Hibernate] 
+    insert 
+    into
+        users
+        (date_of_birthday, email, first_name, last_name, phone_number, codice_fiscale) 
+    values
+        ($1, $2, $3, $4, $5, $6)
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        count(*) 
+    from
+        users u1_0
+[Hibernate] 
+    select
+        b1_0.isbn,
+        b1_0.author,
+        b1_0.genre,
+        b1_0.publication_year,
+        b1_0.status,
+        b1_0.stock,
+        b1_0.title 
+    from
+        books b1_0 
+    where
+        b1_0.isbn=$1
+[Hibernate] 
+    insert 
+    into
+        books
+        (author, genre, publication_year, status, stock, title, isbn) 
+    values
+        ($1, $2, $3, $4, $5, $6, $7)
+2026-05-26 13:17:00,909 ERROR [io.quarkus.vertx.http.runtime.QuarkusErrorHandler] (vert.x-eventloop-thread-2) HTTP Request to /api/loans/return/A/string failed, error id: 5bcf3858-c0da-460b-9861-6b2b63b11941-1: org.hibernate.query.SemanticException: Non-boolean expression used in predicate context: user.codiceFiscale [FROM `it.exprivia.models.entity.Loan` WHERE user.codiceFiscale and book.isbn and status = ?3]
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitBooleanExpressionPredicate(SemanticQueryBuilder.java:3401)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitBooleanExpressionPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$BooleanExpressionPredicateContext.accept(HqlParser.java:6459)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2353)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6315)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2353)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6315)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:2337)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$WhereClauseContext.accept(HqlParser.java:6146)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1163)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:956)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:2113)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQueryExpression(SemanticQueryBuilder.java:985)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQueryExpression(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$QueryExpressionContext.accept(HqlParser.java:2003)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:472)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:431)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:292)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:64)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.query.spi.QueryEngine.interpretHql(QueryEngine.java:61)
+	at org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:951)
+	at org.hibernate.reactive.session.impl.ReactiveSessionImpl.interpretAndCreateSelectionQuery(ReactiveSessionImpl.java:561)
+	at org.hibernate.reactive.session.impl.ReactiveSessionImpl.createReactiveSelectionQuery(ReactiveSessionImpl.java:552)
+	at org.hibernate.reactive.mutiny.impl.MutinySessionImpl.createSelectionQuery(MutinySessionImpl.java:121)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.createBaseQuery(CommonAbstractPanacheQueryImpl.java:420)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.createQuery(CommonAbstractPanacheQueryImpl.java:392)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.lambda$firstResult$12(CommonAbstractPanacheQueryImpl.java:350)
+	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:68)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem$KnownItemSubscription.forward(UniCreateFromKnownItem.java:42)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem.subscribe(UniCreateFromKnownItem.java:23)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransform.subscribe(UniOnItemTransform.java:22)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromDeferredSupplier.subscribe(UniCreateFromDeferredSupplier.java:36)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnFailureFlatMap.subscribe(UniOnFailureFlatMap.java:34)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnCancellationCall.subscribe(UniOnCancellationCall.java:27)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:81)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:63)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.vertx.core.Future.lambda$toCompletionStage$3(Future.java:600)
+	at io.vertx.core.impl.future.FutureImpl$4.onSuccess(FutureImpl.java:176)
+	at io.vertx.core.impl.future.FutureImpl$ListenerArray.onSuccess(FutureImpl.java:310)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:66)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.impl.future.PromiseImpl.onSuccess(PromiseImpl.java:49)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:41)
+	at io.vertx.sqlclient.impl.TransactionImpl.lambda$wrap$0(TransactionImpl.java:72)
+	at io.vertx.core.impl.future.FutureImpl$4.onSuccess(FutureImpl.java:176)
+	at io.vertx.core.impl.future.FutureBase.lambda$emitSuccess$0(FutureBase.java:60)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:312)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:168)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:57)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.impl.future.PromiseImpl.onSuccess(PromiseImpl.java:49)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:41)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:23)
+	at io.vertx.pgclient.impl.PgSocketConnection.lambda$doSchedule$2(PgSocketConnection.java:172)
+	at io.vertx.sqlclient.impl.command.CommandResponse.fire(CommandResponse.java:46)
+	at io.vertx.sqlclient.impl.SocketConnectionBase.handleMessage(SocketConnectionBase.java:324)
+	at io.vertx.pgclient.impl.PgSocketConnection.handleMessage(PgSocketConnection.java:114)
+	at io.vertx.sqlclient.impl.SocketConnectionBase.lambda$init$0(SocketConnectionBase.java:137)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:342)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:335)
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:389)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.vertx.pgclient.impl.codec.PgDecoder.fireCommandResponse(PgDecoder.java:52)
+	at io.vertx.pgclient.impl.codec.PgCommandCodec.handleReadyForQuery(PgCommandCodec.java:133)
+	at io.vertx.pgclient.impl.codec.PgDecoder.decodeReadyForQuery(PgDecoder.java:248)
+	at io.vertx.pgclient.impl.codec.PgDecoder.channelRead(PgDecoder.java:107)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+[Hibernate] 
+    select
+        b1_0.isbn,
+        b1_0.author,
+        b1_0.genre,
+        b1_0.publication_year,
+        b1_0.status,
+        b1_0.stock,
+        b1_0.title 
+    from
+        books b1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        count(*) 
+    from
+        users u1_0
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    where
+        u1_0.codice_fiscale=$1
+[Hibernate] 
+    select
+        b1_0.isbn,
+        b1_0.author,
+        b1_0.genre,
+        b1_0.publication_year,
+        b1_0.status,
+        b1_0.stock,
+        b1_0.title 
+    from
+        books b1_0 
+    where
+        b1_0.isbn=$1
+[Hibernate] 
+    select
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.loan_date,
+        l1_0.return_date,
+        l1_0.status,
+        l1_0.user_id 
+    from
+        loans l1_0 
+    where
+        l1_0.user_id=$1 
+        and l1_0.book_id=$2 
+        and l1_0.status=$3 
+    offset
+        $4 rows 
+    fetch
+        first $5 rows only
+[Hibernate] 
+    select
+        nextval('loans_SEQ')
+[Hibernate] 
+    insert 
+    into
+        loans
+        (book_id, loan_date, return_date, status, user_id, id) 
+    values
+        ($1, $2, $3, $4, $5, $6)
+[Hibernate] 
+    select
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.loan_date,
+        l1_0.return_date,
+        l1_0.status,
+        l1_0.user_id 
+    from
+        loans l1_0 
+    offset
+        $1 rows 
+    fetch
+        first $2 rows only
+[Hibernate] 
+    select
+        b1_0.isbn,
+        b1_0.author,
+        b1_0.genre,
+        b1_0.publication_year,
+        b1_0.status,
+        b1_0.stock,
+        b1_0.title 
+    from
+        books b1_0 
+    where
+        b1_0.isbn=$1
+[Hibernate] 
+    select
+        u1_0.codice_fiscale,
+        u1_0.date_of_birthday,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.phone_number 
+    from
+        users u1_0 
+    where
+        u1_0.codice_fiscale=$1
+[Hibernate] 
+    select
+        count(*) 
+    from
+        loans l1_0
+2026-05-26 13:18:45,495 ERROR [io.quarkus.vertx.http.runtime.QuarkusErrorHandler] (vert.x-eventloop-thread-2) HTTP Request to /api/loans/return/A/string failed, error id: 5bcf3858-c0da-460b-9861-6b2b63b11941-2: org.hibernate.query.SemanticException: Non-boolean expression used in predicate context: user.codiceFiscale [FROM `it.exprivia.models.entity.Loan` WHERE user.codiceFiscale and book.isbn and status = ?3]
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitBooleanExpressionPredicate(SemanticQueryBuilder.java:3401)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitBooleanExpressionPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$BooleanExpressionPredicateContext.accept(HqlParser.java:6459)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2353)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6315)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:2353)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitAndPredicate(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$AndPredicateContext.accept(HqlParser.java:6315)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:2337)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$WhereClauseContext.accept(HqlParser.java:6146)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1163)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:956)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:2113)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQueryExpression(SemanticQueryBuilder.java:985)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQueryExpression(SemanticQueryBuilder.java:247)
+	at org.hibernate.grammars.hql.HqlParser$QueryExpressionContext.accept(HqlParser.java:2003)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:472)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:431)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:292)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:64)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
+	at org.hibernate.query.spi.QueryEngine.interpretHql(QueryEngine.java:61)
+	at org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:951)
+	at org.hibernate.reactive.session.impl.ReactiveSessionImpl.interpretAndCreateSelectionQuery(ReactiveSessionImpl.java:561)
+	at org.hibernate.reactive.session.impl.ReactiveSessionImpl.createReactiveSelectionQuery(ReactiveSessionImpl.java:552)
+	at org.hibernate.reactive.mutiny.impl.MutinySessionImpl.createSelectionQuery(MutinySessionImpl.java:121)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.createBaseQuery(CommonAbstractPanacheQueryImpl.java:420)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.createQuery(CommonAbstractPanacheQueryImpl.java:392)
+	at io.quarkus.hibernate.reactive.panache.common.runtime.CommonAbstractPanacheQueryImpl.lambda$firstResult$12(CommonAbstractPanacheQueryImpl.java:350)
+	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:68)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem$KnownItemSubscription.forward(UniCreateFromKnownItem.java:42)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem.subscribe(UniCreateFromKnownItem.java:23)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransform.subscribe(UniOnItemTransform.java:22)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromDeferredSupplier.subscribe(UniCreateFromDeferredSupplier.java:36)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnFailureFlatMap.subscribe(UniOnFailureFlatMap.java:34)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnCancellationCall.subscribe(UniOnCancellationCall.java:27)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni.subscribe(UniOnItemTransformToUni.java:25)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:81)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:63)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.vertx.core.Future.lambda$toCompletionStage$3(Future.java:600)
+	at io.vertx.core.impl.future.FutureImpl$4.onSuccess(FutureImpl.java:176)
+	at io.vertx.core.impl.future.FutureImpl$ListenerArray.onSuccess(FutureImpl.java:310)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:66)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.impl.future.PromiseImpl.onSuccess(PromiseImpl.java:49)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:41)
+	at io.vertx.sqlclient.impl.TransactionImpl.lambda$wrap$0(TransactionImpl.java:72)
+	at io.vertx.core.impl.future.FutureImpl$4.onSuccess(FutureImpl.java:176)
+	at io.vertx.core.impl.future.FutureBase.lambda$emitSuccess$0(FutureBase.java:60)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:312)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:168)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:57)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.impl.future.PromiseImpl.onSuccess(PromiseImpl.java:49)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:41)
+	at io.vertx.core.impl.future.PromiseImpl.handle(PromiseImpl.java:23)
+	at io.vertx.pgclient.impl.PgSocketConnection.lambda$doSchedule$2(PgSocketConnection.java:172)
+	at io.vertx.sqlclient.impl.command.CommandResponse.fire(CommandResponse.java:46)
+	at io.vertx.sqlclient.impl.SocketConnectionBase.handleMessage(SocketConnectionBase.java:324)
+	at io.vertx.pgclient.impl.PgSocketConnection.handleMessage(PgSocketConnection.java:114)
+	at io.vertx.sqlclient.impl.SocketConnectionBase.lambda$init$0(SocketConnectionBase.java:137)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:342)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:335)
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:389)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.vertx.pgclient.impl.codec.PgDecoder.fireCommandResponse(PgDecoder.java:52)
+	at io.vertx.pgclient.impl.codec.PgCommandCodec.handleReadyForQuery(PgCommandCodec.java:133)
+	at io.vertx.pgclient.impl.codec.PgDecoder.decodeReadyForQuery(PgDecoder.java:248)
+	at io.vertx.pgclient.impl.codec.PgDecoder.channelRead(PgDecoder.java:107)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Debugger failed to attach: handshake failed - connection prematurally closed
+2026-05-26 13:23:17,313 INFO  [io.quarkus.deployment.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-3) Restarting quarkus due to changes in LoanServiceImpl.class, IsbnValidator.class, LoanRepository.class, UserNotFoundException.class, BookCreateRequest.class, UserController.class, BookServiceImpl.class, BookController.class, ServiceException.class, BookStockUpdateRequest.class, DuplicateBookException.class, BookStatus.class, BookNotFoundException.class, BookDTO.class, LoanResponseDTO.class, IBook.class, BookRepository.class, UserRepository.class, User.class, LoanMapper.class, LoanMapperImpl.class, InsufficientStockException.class, UserMapper.class, LoanStatus.class, IUser.class, GlobalHandler.class, UserServiceImpl.class, LoanDTO.class, ILoan.class, ValidIsbn.class, UserDTO.class, Loan.class, LoanController.class, DuplicateUserException.class, BookMapper.class, BookDTO.class, PagedResponse.class, Book.class, GreetingResource.class, BookMapperImpl.class, UserMapperImpl.class.
+2026-05-26 13:23:17,461 INFO  [io.quarkus] (Quarkus Main Thread) mutiny stopped in 0.145s
+2026-05-26 13:23:17,813 INFO  [io.quarkus.hibernate.orm.deployment.dev.HibernateOrmDevServicesProcessor] (build-35) Setting quarkus.hibernate-orm.schema-management.strategy=drop-and-create to initialize Dev Services managed database
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-05-26 13:23:18,620 WARN  [io.quarkus.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.hibernate-orm.generation" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+[Hibernate] 
+    set client_min_messages = WARNING
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FKokwvlrv6o4i4h3le3bwhe6kie
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FK6xxlcjc0rqtn5nq28vjnx5t9d
+[Hibernate] 
+    drop table if exists books cascade
+[Hibernate] 
+    drop table if exists loans cascade
+[Hibernate] 
+    drop table if exists users cascade
+[Hibernate] 
+    drop sequence if exists loans_SEQ
+[Hibernate] 
+    set client_min_messages = WARNING
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FKokwvlrv6o4i4h3le3bwhe6kie
+[Hibernate] 
+    alter table if exists loans 
+       drop constraint if exists FK6xxlcjc0rqtn5nq28vjnx5t9d
+[Hibernate] 
+    drop table if exists books cascade
+[Hibernate] 
+    drop table if exists loans cascade
+[Hibernate] 
+    drop table if exists users cascade
+[Hibernate] 
+    drop sequence if exists loans_SEQ
+[Hibernate] 
+    create sequence loans_SEQ start with 1 increment by 50
+[Hibernate] 
+    create table books (
+        publication_year integer not null,
+        stock integer not null,
+        isbn varchar(20) not null,
+        author varchar(255) not null,
+        status varchar(255) not null check ((status in ('AVAILABLE','RESERVED','DAMAGED','OUT_OF_STOCK'))),
+        title varchar(255) not null,
+        genre varchar(255) array not null,
+        primary key (isbn)
+    )
+[Hibernate] 
+    create table loans (
+        loan_date date not null,
+        return_date date not null,
+        id bigint not null,
+        book_id varchar(20) not null,
+        status varchar(255) not null check ((status in ('ACTIVE','RETURNED','OVERDUE','PENDING'))),
+        user_id varchar(255) not null,
+        primary key (id)
+    )
+[Hibernate] 
+    create table users (
+        date_of_birthday timestamp(6) not null,
+        codice_fiscale varchar(255) not null,
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        phone_number varchar(255) not null unique,
+        primary key (codice_fiscale)
+    )
+[Hibernate] 
+    alter table if exists loans 
+       add constraint FKokwvlrv6o4i4h3le3bwhe6kie 
+       foreign key (book_id) 
+       references books
+[Hibernate] 
+    alter table if exists loans 
+       add constraint FK6xxlcjc0rqtn5nq28vjnx5t9d 
+       foreign key (user_id) 
+       references users
+2026-05-26 13:23:18,728 INFO  [io.quarkus] (Quarkus Main Thread) mutiny 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.31.3) started in 1.266s. Listening on: http://localhost:8080
+2026-05-26 13:23:18,728 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2026-05-26 13:23:18,728 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, compose, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, reactive-pg-client, rest, rest-jackson, smallrye-context-propagation, smallrye-fault-tolerance, smallrye-health, smallrye-openapi, swagger-ui, vertx]
+2026-05-26 13:23:18,728 INFO  [io.quarkus.deployment.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-3) Live reload total time: 2.865s 

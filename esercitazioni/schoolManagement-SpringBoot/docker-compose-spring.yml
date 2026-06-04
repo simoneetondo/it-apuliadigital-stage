@@ -1,0 +1,29 @@
+services:
+  spring-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spring-backend
+    restart: always
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${MY_ACTIVE_PROFILE}
+      - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+    networks:
+      - net-scuola
+      # Importante: l'app non deve crashare se il DB ci mette 2 secondi in più ad avviarsi
+      # healthcheck:
+      #  test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      #  interval: 30s
+      #  timeout: 10s
+      # retries: 3
+
+networks:
+  net-scuola:
+    external: true
+    # external true = utilizzata quando hai diversi docker-compose che devono comunicare tra di loro
+    #                 eviti che la rete venga cancellata quando spegni il container
+
+# docker network create net-scuola - abbiamo creato la rete scuola in tutti li ambienti, cosi' possono comunicare e vedersi tra di loro

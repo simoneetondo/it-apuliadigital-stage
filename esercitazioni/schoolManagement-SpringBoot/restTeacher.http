@@ -1,0 +1,39 @@
+GET http://127.0.0.1:8080/api/teachers
+ 
+
+###
+
+GET http://127.0.0.1:8080/api/teachers/1
+
+
+###
+
+POST http://127.0.0.1:8080/api/teachers
+Content-Type: application/json
+
+{
+  "email": "tr.simone@gmail.com",
+  "username": "Lucy",
+  "password": "Lucia1234!",
+  "firstName": "Lucia",
+  "lastName": "Milelli",
+  "teacherSub": "Matematica"
+}
+
+###
+
+PUT http://127.0.0.1:8080/api/teachers/2
+Content-Type: application/json
+
+{
+    "firstName": "Giulio",
+    "lastName": "Rondine",
+    "teacherSub": "Geometria"
+}
+
+###
+
+DELETE http://127.0.0.1:8080/api/teachers/1
+
+
+

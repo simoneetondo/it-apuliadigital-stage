@@ -1,0 +1,21 @@
+services:
+  db-mysql:
+    image: mysql:8.0
+    container_name: mysql-scuola
+    restart: always
+    environment:
+      - MYSQL_DATABASE=project_school
+      - MYSQL_ROOT_PASSWORD=Lecce2024!
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_persistence_final:/var/lib/mysql
+    networks:      # <--- deve essere allineato con 'volumes' e 'ports'
+      - net-scuola
+
+volumes:
+  mysql_persistence_final:
+
+networks:
+  net-scuola:
+    external: true
